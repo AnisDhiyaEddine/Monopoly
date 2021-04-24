@@ -1,10 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import App from "./components/App"
 let jsx = (
-  <body>
-    <h1>Hello world ;)</h1>
-  </body>
+    <App />  
 );
 
 ReactDOM.render(jsx, document.getElementById("root"));

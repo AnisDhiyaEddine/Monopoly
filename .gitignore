@@ -1,3 +1,6 @@
+# Custom gitignore configurations
+server/config/dev.js
+tempo
 # Logs
 logs
 *.log
