@@ -7,17 +7,19 @@ export default class App extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log(props)
-        subscribeToTimer((err, timestamp) => this.setState({ 
-          timestamp 
-        }));
+        subscribeToTimer((err, timestamp) => {
+            //console.log(timestamp)
+            this.setState({ 
+            timestamp 
+          })
+        });
       }
 
       render() {
         return (
           <div className="App">
             <p className="App-intro">
-            This is the timer value: {this.state.timestamp}
+            Hello to check server status ... Look at the console
             </p>
           </div>
         );
