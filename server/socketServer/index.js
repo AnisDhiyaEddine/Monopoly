@@ -1,4 +1,8 @@
 const socketIO = require("socket.io");
+const ConnectionHandler = require('./ConnectionBasedEvents');
+const RoomsEvents = require('./RoomsEvents');
+const GamesEvents = require('./GamesEvents');
+const UsersEvents = require('./UsersEvents');
 
 module.exports = (expressServer) => {
     io = socketIO(expressServer,{ 
@@ -10,14 +14,7 @@ module.exports = (expressServer) => {
       }
     })
     io.on('connection', (socket) => {
-      console.log("new socket with " + socket.id + " online");
-      socket.broadcast.emit("new Connection","hello new client connected");
-      socket.on('subscribeToTimer', (interval) => {
-        setInterval(() => {
-          socket.emit('timer', new Date());
-        }, interval);
-      });
+      ConnectionHandler(socket);
     });
-    
 return io
 }

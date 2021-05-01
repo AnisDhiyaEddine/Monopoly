@@ -13,9 +13,6 @@ const roomSchema = new mongoose.Schema(
     {timestamps : true}
 );
 
-roomSchema.pre('remove', async function(next){
-})
-
 // Other Collections based logic here !
 
 const Room = mongoose.model('Room',roomSchema);

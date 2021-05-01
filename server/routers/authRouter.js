@@ -28,14 +28,4 @@ router.delete('/deleteAccount', async (req,res) => {
     }
 }) 
 
-/**
- * database model 
- * Name, 
- * room : {
- * roomID,
- * Array of other users IDs
- * }
- */
-
-
 module.exports = router;

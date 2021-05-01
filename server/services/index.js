@@ -1,1 +1,1 @@
-console.log("hello services");
+console.log("starting point for configuring third party services");

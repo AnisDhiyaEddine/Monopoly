@@ -37,9 +37,5 @@ const gameSchema = new mongoose.Schema(
     {timestamps : true}
 );
 
-gameSchema.pre('remove', async function(next){
-})
-
-
 const Game = mongoose.model('Game', gameSchema);
 module.exports = {schema : gameSchema, Model : Game};

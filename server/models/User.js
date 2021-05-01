@@ -9,9 +9,6 @@ const userSchema = new mongoose.Schema(
     {timestamps : true}
 );
 
-userSchema.pre('remove', async function(next){
-})
-
 // Other Collections based logic here !
 
 const User = mongoose.model('User',userSchema);
