@@ -1,1 +1,1 @@
-console.log("hello models");
+//Didn't Really care about data load ;)
