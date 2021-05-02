@@ -1,5 +1,5 @@
 import React from "react";
-import {subscribeToTimer} from "../api/socketClient"
+import {subscribeToTimer} from "../api/realTime"
 export default class App extends React.Component {
     state = {
         timestamp: 'no timestamp yet'
