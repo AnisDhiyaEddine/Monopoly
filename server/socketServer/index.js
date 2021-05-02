@@ -1,8 +1,7 @@
 const socketIO = require("socket.io");
 const ConnectionHandler = require('./ConnectionBasedEvents');
-const RoomsEvents = require('./RoomsEvents');
-const GamesEvents = require('./GamesEvents');
-const UsersEvents = require('./UsersEvents');
+const RoomsHandler = require('./RoomsEvents');
+const GamesHandler = require('./GamesEvents');
 
 module.exports = (expressServer) => {
     io = socketIO(expressServer,{ 
@@ -15,6 +14,8 @@ module.exports = (expressServer) => {
     })
     io.on('connection', (socket) => {
       ConnectionHandler(socket);
+      RoomsHandler(socket);
+      GamesHandler(socket);
     });
 return io
 }

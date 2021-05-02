@@ -9,6 +9,7 @@ const router = new Router();
 router.post('/rooms/create',async (req, res)=>{
     try {
         const data = req.body;  // data : {roomName, userName}
+        console.log(data);
         const exists = await Room.find({roomName : data.roomName});
         if(exists.length){res.status(400).send("Room name should be unique"); return;};
         const room = new Room({...data, users : [{userName : data.userName }] }); // by default the first user owns the room
@@ -22,16 +23,19 @@ router.post('/rooms/create',async (req, res)=>{
 
 });
 
+///////////////////////////////////////////////////////////////////
 router.patch('/rooms/joinRoom', async ( req, res ) => {
-    try {
+    try {        
         const data = req.body; // data : {userName, roomName} ;;
-        const room = await Room.findOneAndUpdate({roomName : data.roomName} , {$addToSet : {users : data.userName}});
+        console.log(data);
+        const room = await Room.findOneAndUpdate({roomName : data.roomName} , {$addToSet : {users : {userName : data.userName}}});
         res.status(200).send(room);
     } catch (error) {
         console.error(error);
         res.status(500).send(error);
     }
 })
+///////////////////////////////////////////////////////////////////
 
 router.get('/rooms/all',async (req, res) => {
     try {

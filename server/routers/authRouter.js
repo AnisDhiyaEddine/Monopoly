@@ -19,6 +19,7 @@ router.post('/Register', async (req,res) => {
 
 router.delete('/deleteAccount', async (req,res) => {
     let data = req.body ? req.body : res.status(400).send("invalid arguments");// data : { name }
+    console.log(data)
     try {
         await User.deleteOne({name : data.name});
         res.status(200).send('user deleted');
