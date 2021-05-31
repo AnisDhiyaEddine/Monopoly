@@ -17,19 +17,19 @@ socket.on("newClient",(message) => {
 
 const userJoinedRoom =  async (callback) => {
   //Socket is a global object here.
-  socket.on('userJoined', (data) => {
+  socket.on('userJoined',async (data) => {
     await callback(data);
   })
 }
 
 const userQuitRoom = async (callback) => {
-  socket.on('userQuitRoom', (data) => {
+  socket.on('userQuitRoom',async (data) => {
     await callback(data);
   })
 }
 
 const userEndsGame = async (callback) => {
-  socket.on('userEndsGame', (data) => {
+  socket.on('userEndsGame',async (data) => {
       await callback(data);
   })
 }
