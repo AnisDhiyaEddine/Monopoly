@@ -5,7 +5,6 @@ export default class App extends React.Component {
         timestamp: 'no timestamp yet'
     };
 
-
       render() {
         return (
           <div className="App">
