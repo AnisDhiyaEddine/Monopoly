@@ -1,7 +1,6 @@
 const Router = require("express").Router;
 const Room = require('../models/Room').Model;
 const User = require('../models/User').Model;
-//All middlwares should be configured at this point ;)
 const router = new Router();
 
 
@@ -23,7 +22,6 @@ router.post('/rooms/create',async (req, res)=>{
 
 });
 
-///////////////////////////////////////////////////////////////////
 router.patch('/rooms/joinRoom', async ( req, res ) => {
     try {        
         const data = req.body; // data : {userName, roomName} ;;
@@ -35,7 +33,6 @@ router.patch('/rooms/joinRoom', async ( req, res ) => {
         res.status(500).send(error);
     }
 })
-///////////////////////////////////////////////////////////////////
 
 router.get('/rooms/all',async (req, res) => {
     try {

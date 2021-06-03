@@ -1,7 +1,6 @@
 // All connection logic
 // A user connects  -> notify all the connected users -> update the state 
 // A user disconnect
-// What else ?!! 
 
 
 module.exports = (socket) => {
@@ -9,7 +8,7 @@ module.exports = (socket) => {
     socket.broadcast.emit("new Connection","hello new client connected");
     
     socket.on('disconnect', ()=>{
-        // a player has been disconnected close room and save state
+        // a player has been disconnected, close room and save state && notify other users
         io.emit('closeRoom');
         io.emit('endGame');
     })

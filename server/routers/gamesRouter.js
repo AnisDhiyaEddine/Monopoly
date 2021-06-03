@@ -1,9 +1,7 @@
 const Router = require("express").Router;
 const Game = require('../models/Game').Model;
-//All middlwares should be configured at this point ;)
 const router = new Router();
 
-// Create Game
 router.post('/games/new',async (req,res)=>{
     try{
         const data = req.body; // data : {roomName, gameName, userName} ;;by default gameName is the roomName
@@ -19,7 +17,6 @@ router.post('/games/new',async (req,res)=>{
     }
 });
 
-///////////////////////////////////////////////////////////////////
 
 router.patch('/games/update', async (req,res) => {
     // Last user has it's last state
@@ -33,7 +30,6 @@ router.patch('/games/update', async (req,res) => {
     }
 })
 
-///////////////////////////////////////////////////////////////////
 
 
 router.delete('/games/delete', async (req,res) => {

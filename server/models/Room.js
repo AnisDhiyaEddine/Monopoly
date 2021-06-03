@@ -13,7 +13,5 @@ const roomSchema = new mongoose.Schema(
     {timestamps : true}
 );
 
-// Other Collections based logic here !
-
 const Room = mongoose.model('Room',roomSchema);
 module.exports = {schema: roomSchema, Model : Room};

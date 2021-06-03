@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Router = require("express").Router;
 const User = require('../models/User').Model;
-//All middlwares should be configured at this point ;)
 const router = new Router();
 
 router.post('/Register', async (req,res) => {

@@ -9,7 +9,5 @@ const userSchema = new mongoose.Schema(
     {timestamps : true}
 );
 
-// Other Collections based logic here !
-
 const User = mongoose.model('User',userSchema);
 module.exports = {schema : userSchema, Model: User};

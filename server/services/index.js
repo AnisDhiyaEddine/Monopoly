@@ -1,1 +1,1 @@
-console.log("starting point for configuring third party services");
+console.log("pour gérer la configurations des différents serveurs.. .");

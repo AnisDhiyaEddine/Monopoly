@@ -1,1 +1,1 @@
-console.log("hello helpers");
+console.log("pour rajouté des fonctions utilitaires");
