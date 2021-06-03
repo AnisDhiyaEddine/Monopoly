@@ -1,11 +1,8 @@
 # Monopoly
 
 ## Version
-
-* [x] En
 -------
-## About the project
-<p>This project is a multi-player Monopoly game with real-time  </p>
+## Start the project
 
 - ### A Rest-Api
   <p>To handle async operations</p>
@@ -15,7 +12,8 @@
   git clone https://github.com/AnisDhiyaEddine/Monopoly.git
   cd server
   npm install
-  npm run start
+  node index.js
+  # config/dev.js should be added to connect to the Database
   ```
 - ### A Real-time socket.io server
    <p>To handle real-time eventing && notifications </p>
@@ -26,7 +24,7 @@
   git clone https://github.com/AnisDhiyaEddine/Monopoly.git
   cd server
   npm install
-  npm run start
+  node index.js
   ```
 - ### A React-client
    <p>Client</p>
@@ -34,53 +32,47 @@
 
   ```bash
   git clone https://github.com/AnisDhiyaEddine/Monopoly.git
-  cd socketServer
+  cd client
   npm install
   npm run start
   ```          
 
   -----
-### Visual the project on [Monopoly project](link)
-  -----
 
 ## Fr
-* [x] Fr
 -------
-## Sur le projet
-<p>
-Monopoly description. </p>
+## Démmarer le projet
 
-- ### Un client nodeJS
-  <p>à installer sur les serveurs</p>
+- ### Un serveur express
+  <p>Pour gérer les opérations asynchrone</p>
   <p>Commencer</p>
 
   ```bash
   git clone https://github.com/AnisDhiyaEddine/Monopoly.git
-  cd nodeClient 
-  yarn install
-  yarn start
-  ```
-- ### Un client react
-   <p>à installer sur les moniteurs</p>
-   <p>Commencer</p>
-
-  ```bash
-  git clone https://github.com/AnisDhiyaEddine/Monopoly.git
-  cd react-client
-  yarn install
-  yarn start
+  cd server
+  npm install
+  npm run start
+  # config/dev.js doit être rajouté pour communiquer avec la base de données.
   ```
 - ### Un serveur socket.io
-   <p>à installer sur le serveur principal</p>
+   <p>Pour géré les notifications et les événements en temps réel  </p>
+   <p>Commencer</p>
+   <p>Ce serveur est attaché à l'Api Rest</p>
+
+  ```bash
+    git clone https://github.com/AnisDhiyaEddine/Monopoly.git
+    cd server
+    npm install
+    node index.js
+  ```
+- ### un client react
+   <p>une implémentation du UI</p>
    <p>Commencer</p>
 
   ```bash
   git clone https://github.com/AnisDhiyaEddine/Monopoly.git
-  cd socketServer
-  yarn install
-  yarn start
+  cd client
+  npm install
+  npm run start
   ```          
-  -----
-    -----
-### Visualisez le projet sur [Projet Monopoly](link)
   -----
